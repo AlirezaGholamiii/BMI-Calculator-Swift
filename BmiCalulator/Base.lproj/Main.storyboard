@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BmiCalulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bmi_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-fW-rsq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzg-G7-WZE">
+                                <rect key="frame" x="161.5" y="365" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="hO1-6s-ipD"/>
+                                    <constraint firstAttribute="height" constant="21" id="oa0-Wf-6Nh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your height in cm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rge-8P-sq7">
+                                <rect key="frame" x="139" y="402" width="136" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="Ap3-Ca-C6T"/>
+                                    <constraint firstAttribute="height" constant="34" id="qjx-IG-07b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtheightChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="qWl-Nu-UdL"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38O-xu-tVa">
+                                <rect key="frame" x="158.5" y="479" width="97" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="aT0-1j-6r9"/>
+                                    <constraint firstAttribute="height" constant="21" id="eU5-zv-kee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your weight in kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXv-YD-hMT">
+                                <rect key="frame" x="139" y="508" width="136" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="k0m-nH-lZX"/>
+                                    <constraint firstAttribute="width" constant="136" id="o75-cs-xL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtWeghtChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="H70-Wb-ayy"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lo-19-pkB">
+                                <rect key="frame" x="20" y="602" width="374" height="49"/>
+                                <color key="backgroundColor" red="0.46178576945554178" green="0.66886104060913709" blue="0.46071566798104657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="dfp-jr-65w"/>
+                                    <constraint firstAttribute="width" constant="374" id="fHo-TI-dNj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ees-YW-VF4"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bmi classification will be here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-aF-pNu">
+                                <rect key="frame" x="0.0" y="728" width="414" height="39"/>
+                                <color key="backgroundColor" red="0.93276094543147203" green="0.89148619378197869" blue="0.55326985614440105" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="4YY-LU-sSw"/>
+                                    <constraint firstAttribute="height" constant="39" id="mqv-Jx-rt1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-9H-oC6">
+                                <rect key="frame" x="0.0" y="323" width="414" height="34"/>
+                                <color key="backgroundColor" red="0.75999365482233505" green="0.75999365482233505" blue="0.75999365482233505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="yTD-10-XWN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Gb-fW-rsq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6NC-On-szP"/>
+                            <constraint firstItem="mzg-G7-WZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ai-sR-RUX"/>
+                            <constraint firstItem="4Gb-fW-rsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQh-ii-5sJ"/>
+                            <constraint firstItem="7Lo-19-pkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DR3-5W-sog"/>
+                            <constraint firstItem="Nl9-aF-pNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QyE-Pe-OvJ"/>
+                            <constraint firstItem="Xda-9H-oC6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ROa-J4-5J3"/>
+                            <constraint firstItem="4Gb-fW-rsq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rsh-Pw-QOF"/>
+                            <constraint firstItem="GXv-YD-hMT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZT-az-mrV"/>
+                            <constraint firstItem="38O-xu-tVa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Thp-fP-1Ak"/>
+                            <constraint firstItem="mzg-G7-WZE" firstAttribute="top" secondItem="Xda-9H-oC6" secondAttribute="bottom" constant="8" symbolic="YES" id="Vjy-3H-Uan"/>
+                            <constraint firstItem="Xda-9H-oC6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aud-r0-Qqg"/>
+                            <constraint firstItem="rge-8P-sq7" firstAttribute="top" secondItem="mzg-G7-WZE" secondAttribute="bottom" constant="16" id="bRh-YN-0Uh"/>
+                            <constraint firstItem="7Lo-19-pkB" firstAttribute="top" secondItem="GXv-YD-hMT" secondAttribute="bottom" constant="60" id="eUt-AS-Mt1"/>
+                            <constraint firstItem="GXv-YD-hMT" firstAttribute="top" secondItem="38O-xu-tVa" secondAttribute="bottom" constant="8" symbolic="YES" id="jFA-Hw-aZ3"/>
+                            <constraint firstItem="Xda-9H-oC6" firstAttribute="top" secondItem="4Gb-fW-rsq" secondAttribute="bottom" constant="8" symbolic="YES" id="lh6-86-7jP"/>
+                            <constraint firstItem="38O-xu-tVa" firstAttribute="top" secondItem="rge-8P-sq7" secondAttribute="bottom" constant="43" id="o3a-9j-17T"/>
+                            <constraint firstItem="rge-8P-sq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qux-Np-QTP"/>
+                            <constraint firstItem="Nl9-aF-pNu" firstAttribute="top" secondItem="7Lo-19-pkB" secondAttribute="bottom" constant="77" id="vfD-o8-qUQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCalculate" destination="7Lo-19-pkB" id="yW1-2V-fXe"/>
+                        <outlet property="lblResult" destination="Nl9-aF-pNu" id="dTX-Lc-sA4"/>
+                        <outlet property="txtHeight" destination="rge-8P-sq7" id="BDa-H4-0eI"/>
+                        <outlet property="txtWeight" destination="GXv-YD-hMT" id="fRd-43-JXA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bmi_logo" width="600" height="315"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
